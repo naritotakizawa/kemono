@@ -1,0 +1,27 @@
+{% extends "image/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="mt-5 text-center">
+    <h1 class="display-4">アニメキャラ検出アプリ（けものフレンズ）</h1>
+    <p>
+      <a href="{% url 'image:list' %}" class="btn btn-primary">一覧へ</a>
+    </p>
+  </div>
+  <hr>
+  <div class="col-sm-6 offset-sm-3">
+  <form action="" method="POST" enctype='multipart/form-data'>
+    <div class="form-group row">
+      <label for="{{ form.file.id_for_label }}" class="col-sm-3 form-control-label">
+        {{ form.file.label }}
+      </label>
+      <div class="col-sm-9">
+        {{ form.file }}
+        {{ form.file.errors }}
+      </div>
+    </div>
+    {% csrf_token %}
+    <input type="submit" class="btn btn-outline-primary btn-lg btn-block" value="送信する">
+  </form>
+  </div>
+</div>
+{% endblock %}

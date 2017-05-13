@@ -1,0 +1,27 @@
+{% extends "image/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="mt-5 text-center">
+    <h1 class="display-4">フレンズ検出</h1>
+    <p>
+      <a href="{% url 'image:create' %}" class="btn btn-primary">画像アップロード</a>
+    </p>
+  </div>
+  <hr>
+  <div class="row">
+  {% for img in image_list %}
+    <div class="col-3">
+      <a href="{{ img.file.url }}"><img class="img-thumbnail" src="{{ img.file.url }}"></a>
+    </div>
+    <div class="col-3">
+      <h2>映っているキャラ</h2>
+      <h5>{{ img.names }}</h5>
+      {% if user.is_authenticated %}
+      <p><a href="{% url 'admin:image_image_delete' img.id %}">削除</a></p>
+      {% endif %}
+    </div>
+  {% endfor %}
+  </div>
+
+</div>
+{% endblock %}
