@@ -3,7 +3,7 @@ kemono
 ======
 
 Djangoで、けものフレンズのキャラを認識させる（Deep Learning）
-https://torina.top/main/335/
+https://torina.top/detail/335/
 
 Python3.5で動作を確認
 
@@ -12,7 +12,7 @@ Python3.5で動作を確認
 
 1. プロジェクトをクローンする `git clone https://github.com/naritotakizawa/kemono.git`
 
-2. `pip install -r requirements.txt` opencvが入らない場合は http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv からwhlをダウンロード
+2. `pip install -r requirements.txt` Windowsでopencvが入らない場合は http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv からwhlをダウンロード
 
 3. `python manage.py migrate`
 
