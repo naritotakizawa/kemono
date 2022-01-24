@@ -2,8 +2,6 @@
 kemono
 ======
 
-Djangoで、けものフレンズのキャラを認識させる（Deep Learning）
-https://torina.top/detail/335/
 
 Python3.5で動作を確認
 
